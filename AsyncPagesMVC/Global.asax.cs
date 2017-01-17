@@ -28,7 +28,10 @@ public class MvcApplication :
 
     protected void Application_End()
     {
-        endpoint?.Stop().GetAwaiter().GetResult();
+        if (endpoint != null)
+        {
+            endpoint.Stop().GetAwaiter().GetResult();
+        }
     }
 
     protected void Application_Start()

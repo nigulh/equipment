@@ -29,8 +29,9 @@ class Program
         }
         finally
         {
-            await endpointInstance.Stop()
-                .ConfigureAwait(false);
+            // Cannot await in the body of a finally clause
+            // await endpointInstance.Stop()
+            //    .ConfigureAwait(false);
         }
     }
 }
