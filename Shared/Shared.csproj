@@ -28,10 +28,11 @@
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NServiceBus.Callbacks">
+    <Reference Include="NServiceBus.Callbacks, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\packages\NServiceBus.Callbacks.1.0.0\lib\net452\NServiceBus.Callbacks.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="NServiceBus.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c">
+    <Reference Include="NServiceBus.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\packages\NServiceBus.6.1.1\lib\net452\NServiceBus.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -41,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Command.cs" />
     <Compile Include="ErrorCodes.cs" />
+    <Compile Include="Messages\Equipment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
