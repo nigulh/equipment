@@ -1,9 +1,11 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Optimization;
 using Autofac;
 using Autofac.Integration.Mvc;
 using NServiceBus;
+using AsyncPagesMVC;
 
 public class MvcApplication :
     HttpApplication
@@ -71,6 +73,8 @@ public class MvcApplication :
 
         AreaRegistration.RegisterAllAreas();
         RegisterRoutes(RouteTable.Routes);
+
+        BundleConfig.RegisterBundles(BundleTable.Bundles);
 
         #endregion
     }

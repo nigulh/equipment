@@ -14,6 +14,13 @@ namespace Server
         public Task Handle(GetEquipmentList message, IMessageHandlerContext context)
         {
             log.Info("GetEquipmentList handling");
+            if (message != null) return context.Reply(new Equipment()
+            {
+                Name = "Caterpillar bulldozer",
+                Type = EquipmentType.Heavy,
+                Id = 0,
+                Url = "http://s7d2.scene7.com/is/image/Caterpillar/C10337180"
+            });
 
             EquipmentList equipments = new EquipmentList();
 

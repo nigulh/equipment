@@ -1,0 +1,28 @@
+﻿@model Shared.Equipment
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@Model
+@foreach (var item in new List<Shared.Equipment>(){Model})
+{
+<tr>
+    <td>
+        @item.Name
+        <img src="@item.Url" />
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>
