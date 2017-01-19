@@ -1,22 +1,21 @@
 ﻿@model Shared.EquipmentList
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = @Resources.Equipments.ListTitle;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List</h2>
+<h2>@Resources.Equipments.ListTitle</h2>
 
 <table class="table">
     <tr>
         <th></th>
     </tr>
 
-@Model
 @foreach (var item in Model.Items)
 {
 <tr>
     <td>
-        @item.Name
+        @Resources.Equipments.Name: @item.Name
         <img class="thumb" src="@item.Url" />
         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
