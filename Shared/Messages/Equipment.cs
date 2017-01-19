@@ -19,13 +19,26 @@ namespace Shared
         public string Name { get; set; }
         public EquipmentType Type { get; set; }
         public string Url { get; set; }
+        public List<GetEquipmentList> specials { get; set; }
     
-        public Equipment() { }
+        public Equipment() 
+        {
+            specials = new List<GetEquipmentList>();
+        }
     }
 
-    public class EquipmentList : List<Equipment>, IMessage
+    public class EquipmentList : IMessage
     {
-        public EquipmentList() { }
+        public List<Equipment> Items { get; set; }
+        public EquipmentList() 
+        {
+            Items = new List<Equipment>();
+        }
+
+        public void Add(Equipment item)
+        {
+            Items.Add(item);
+        }
     }
 
     public class GetEquipmentList : IMessage

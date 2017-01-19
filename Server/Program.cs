@@ -30,8 +30,8 @@ class Program
         finally
         {
             // Cannot await in the body of a finally clause
-            // await endpointInstance.Stop()
-            //    .ConfigureAwait(false);
+            // await endpointInstance.Stop().ConfigureAwait(false);
         }
+        await endpointInstance.Stop().ConfigureAwait(false);
     }
 }

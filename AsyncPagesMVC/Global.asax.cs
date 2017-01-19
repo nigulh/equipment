@@ -21,8 +21,8 @@ public class MvcApplication :
             "{controller}/{action}/{id}", // URL with parameters
             new
             {
-                controller = "Home",
-                action = "SendLinks",
+                controller = "Equipments",
+                action = "List",
                 id = UrlParameter.Optional
             } // Parameter defaults
             );

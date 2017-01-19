@@ -70,6 +70,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -113,8 +114,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Service\Util.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Custom.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
@@ -156,6 +159,9 @@
     </Content>
     <Content Include="Views\Shared\_links.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using NServiceBus;
 using Shared;
 using System.Threading.Tasks;
+using AsyncPagesMVC.Service;
 
 namespace AsyncPagesMVC.Controllers
 {
@@ -22,13 +23,19 @@ namespace AsyncPagesMVC.Controllers
         [HttpGet]
         public async Task<ActionResult> List()
         {
-            var command = new GetEquipmentList();
-
-            var sendOptions = new SendOptions();
-            sendOptions.SetDestination("Samples.Mvc.Server");
-            var response = await endpoint.Request<Equipment>(command, sendOptions).ConfigureAwait(false);
-
-            return View("List", response);
+            return View("List", await GetEquipmentList());
         }
+
+        private EquipmentList _equipmentList = null;
+        async Task<EquipmentList> GetEquipmentList()
+        {
+            if (_equipmentList == null)
+            {
+                _equipmentList = await Util.GetServerResponse<EquipmentList>(endpoint, new GetEquipmentList());
+            }
+            return _equipmentList;
+        }
+
+
 	}
 }

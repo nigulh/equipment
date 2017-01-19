@@ -8,7 +8,9 @@ namespace AsyncPagesMVC
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Scripts/jquery-{version}.js"));
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include("~/Content/site.css")
+                .Include("~/Content/custom.css"));
 
             /*
 
