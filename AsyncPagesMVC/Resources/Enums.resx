@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ListTitle" xml:space="preserve">
-    <value>Equipments</value>
+  <data name="EquipmentType_Heavy" xml:space="preserve">
+    <value>Heavy</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Name</value>
+  <data name="EquipmentType_Regular" xml:space="preserve">
+    <value>Regular</value>
   </data>
-  <data name="Type" xml:space="preserve">
-    <value>Type</value>
+  <data name="EquipmentType_Specialized" xml:space="preserve">
+    <value>Specialized</value>
   </data>
 </root>

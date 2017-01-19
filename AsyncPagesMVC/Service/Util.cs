@@ -6,9 +6,22 @@ using System.Configuration;
 using NServiceBus;
 using Shared;
 using System.Threading.Tasks;
+using System.Resources;
 
 namespace AsyncPagesMVC.Service
 {
+    public static class EnumExtensions
+    {
+        public static string GetDisplayName(this Enum e)
+        {
+            // TODO: Make it work
+            var rm = new ResourceManager(typeof(Resources.Enums).Name, typeof(Resources.Enums).Assembly);
+            var resourceDisplayName = rm.GetString(e.GetType().Name + "_" + e);
+
+            return string.IsNullOrWhiteSpace(resourceDisplayName) ? string.Format("[[{0}]]", e) : resourceDisplayName;
+        }
+    }
+
     public class Util
     {
         public static async Task<T> GetServerResponse<T>(IEndpointInstance endpoint, IMessage command) where T : IMessage

@@ -3,6 +3,7 @@
     ViewBag.Title = @Resources.Equipments.ListTitle;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using AsyncPagesMVC.Service;
 
 <h2>@Resources.Equipments.ListTitle</h2>
 
@@ -16,6 +17,7 @@
 <tr>
     <td>
         @Resources.Equipments.Name: @item.Name
+        @Resources.Equipments.Type: @item.Type
         <img class="thumb" src="@item.Url" />
         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |

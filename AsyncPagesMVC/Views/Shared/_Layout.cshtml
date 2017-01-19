@@ -1,8 +1,7 @@
 ﻿@{
-    System.Web.Optimization.Styles.Render("~/Content/css");
-    System.Web.Optimization.Styles.Render("~/Content/themes/base/css");
-    //Assets.AddScript("~/bundles/js");
+  
 }
+@using AsyncPagesMVC.Service;
 
 <!DOCTYPE html>
 <html>
@@ -22,11 +21,6 @@
         @RenderPage("~/Views/Shared/_links.cshtml")
    
 
-
- 
-
-
-    <p>Elapsed time: @Html.Encode(ViewBag.elapsedTime) </p>
     @Scripts.Render("~/bundles/js")
 </body>
 </html>

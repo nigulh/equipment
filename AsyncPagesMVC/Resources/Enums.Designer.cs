@@ -22,24 +22,24 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Equipments {
+    internal class Enums {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Equipments() {
+        internal Enums() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AsyncPagesMVC.Resources.Equipments", typeof(Equipments).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AsyncPagesMVC.Resources.Enums", typeof(Enums).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,29 +61,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Equipments.
+        ///   Looks up a localized string similar to Heavy.
         /// </summary>
-        public static string ListTitle {
+        internal static string EquipmentType_Heavy {
             get {
-                return ResourceManager.GetString("ListTitle", resourceCulture);
+                return ResourceManager.GetString("EquipmentType_Heavy", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name.
+        ///   Looks up a localized string similar to Regular.
         /// </summary>
-        public static string Name {
+        internal static string EquipmentType_Regular {
             get {
-                return ResourceManager.GetString("Name", resourceCulture);
+                return ResourceManager.GetString("EquipmentType_Regular", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type.
+        ///   Looks up a localized string similar to Specialized.
         /// </summary>
-        public static string Type {
+        internal static string EquipmentType_Specialized {
             get {
-                return ResourceManager.GetString("Type", resourceCulture);
+                return ResourceManager.GetString("EquipmentType_Specialized", resourceCulture);
             }
         }
     }
