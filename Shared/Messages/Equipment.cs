@@ -19,11 +19,9 @@ namespace Shared
         public string Name { get; set; }
         public EquipmentType Type { get; set; }
         public string Url { get; set; }
-        public List<GetEquipmentList> specials { get; set; }
     
         public Equipment() 
         {
-            specials = new List<GetEquipmentList>();
         }
     }
 

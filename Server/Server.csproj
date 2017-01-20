@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="CommandMessageHandler.cs" />
     <Compile Include="GetEquipmentListHandler.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\CustomerRate.cs" />
+    <Compile Include="Model\Equipment.cs" />
+    <Compile Include="Model\MoneyValue.cs" />
+    <Compile Include="Model\FeeComponent.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
