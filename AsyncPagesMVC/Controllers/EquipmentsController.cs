@@ -26,6 +26,7 @@ namespace AsyncPagesMVC.Controllers
             return View("List", await GetEquipmentList());
         }
 
+        //TODO: Proper caching
         private EquipmentList _equipmentList = null;
         async Task<EquipmentList> GetEquipmentList()
         {

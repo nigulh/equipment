@@ -8,7 +8,6 @@ namespace Server.Model
 {
     public abstract class Equipment
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
 
