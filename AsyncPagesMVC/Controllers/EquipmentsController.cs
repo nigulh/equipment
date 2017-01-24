@@ -13,28 +13,19 @@ namespace AsyncPagesMVC.Controllers
     public class EquipmentsController : Controller
     {
         IEndpointInstance endpoint;
+        IEquipmentProvider dataProvider;
 
-        public EquipmentsController(IEndpointInstance endpoint)
+        public EquipmentsController(IEndpointInstance endpoint, IEquipmentProvider dataProvider)
         {
             this.endpoint = endpoint;
+            this.dataProvider = dataProvider;
         }
 
         // GET: /Equipments/
         [HttpGet]
         public async Task<ActionResult> List()
         {
-            return View("List", await GetEquipmentList());
-        }
-
-        //TODO: Proper caching
-        private EquipmentList _equipmentList = null;
-        async Task<EquipmentList> GetEquipmentList()
-        {
-            if (_equipmentList == null)
-            {
-                _equipmentList = await Util.GetServerResponse<EquipmentList>(endpoint, new GetEquipmentList());
-            }
-            return _equipmentList;
+            return View("List", await dataProvider.ListAll());
         }
 
 

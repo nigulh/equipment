@@ -114,6 +114,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Service\EquipmentProvider.cs" />
     <Compile Include="Resources\Enums.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -6,6 +6,8 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using NServiceBus;
 using AsyncPagesMVC;
+using AsyncPagesMVC.Service;
+
 
 public class MvcApplication :
     HttpApplication
@@ -67,6 +69,8 @@ public class MvcApplication :
         var updater = new ContainerBuilder();
         updater.RegisterInstance(endpoint);
         updater.RegisterControllers(typeof(MvcApplication).Assembly);
+        var equipmentProvider = new EquipmentProvider(endpoint);
+        updater.RegisterInstance<IEquipmentProvider>(equipmentProvider);
         var updated = updater.Build();
 
         DependencyResolver.SetResolver(new AutofacDependencyResolver(updated));
