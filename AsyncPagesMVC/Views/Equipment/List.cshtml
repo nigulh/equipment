@@ -1,0 +1,32 @@
+﻿@model Shared.Messages.EquipmentList
+@{
+    ViewBag.Title = @Resources.Equipment.ListTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using AsyncPagesMVC.Service;
+
+<h2>@Resources.Equipment.ListTitle</h2>
+
+<table class="table">
+    <tr>
+        <th>@Resources.Equipment.Image</th>
+        <th>@Resources.Equipment.Name</th>
+        <th>@Resources.Equipment.Type</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Items)
+{
+<tr>
+    <td>
+        <img class="thumb" src="@item.Url" />
+    </td>
+    <td>@item.Name</td>
+    <td>@item.Type</td>
+    <td>
+        @Html.ActionLink(@Resources.Equipment.Rent, "Rent", new { id=item.Id })
+    </td>
+</tr>
+}
+
+</table>

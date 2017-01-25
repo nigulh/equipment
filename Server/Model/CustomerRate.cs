@@ -10,8 +10,8 @@ namespace Server.Model
     public interface CustomerRate
     {
         Currency Currency { get; }
-        decimal OneTimeFee();
-        decimal PremiumDailyFee();
-        decimal RegularDailyFee();
+        decimal OneTimeFee { get; }
+        decimal PremiumDailyFee { get; }
+        decimal RegularDailyFee { get; }
     }
 }

@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DaysToRent" xml:space="preserve">
+    <value>Days to rent</value>
+  </data>
   <data name="Image" xml:space="preserve">
     <value>Image</value>
+  </data>
+  <data name="InvalidDaysToRent" xml:space="preserve">
+    <value>Please enter valid days to rent</value>
   </data>
   <data name="ListTitle" xml:space="preserve">
     <value>Equipments</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Equipment name</value>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>Rent</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>Thumbnail</value>
   </data>
 </root>

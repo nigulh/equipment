@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NServiceBus;
 
-namespace Shared
+namespace Shared.Messages
 {
     public enum EquipmentType 
     {
@@ -41,6 +41,5 @@ namespace Shared
 
     public class GetEquipmentList : IMessage
     {
-
     }
 }

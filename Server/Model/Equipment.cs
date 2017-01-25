@@ -11,16 +11,17 @@ namespace Server.Model
         public string Name { get; set; }
         public string Url { get; set; }
 
-        protected abstract IEnumerable<FeeComponent> RentalFeeComponents();
+        protected abstract IEnumerable<FeeComponent> RentalFeeComponents { get; }
 
-        public virtual int RentalLoyalityPoints() {
-            return 1;
+        public virtual int RentalLoyalityPoints
+        {
+            get { return 1; }
         }
 
         public MoneyValue CalculateRentalPrice(int days, CustomerRate rate)
         {
             var price = 0m;
-            foreach (var component in RentalFeeComponents())
+            foreach (var component in RentalFeeComponents)
             {
                 price += component.ApplyFee(ref days, rate);
             }
@@ -35,14 +36,14 @@ namespace Server.Model
             new PremiumFee()
         };
 
-        protected override IEnumerable<FeeComponent> RentalFeeComponents()
+        protected override IEnumerable<FeeComponent> RentalFeeComponents
         {
-            return HeavyEquipment.FeeComponents;
+            get { return HeavyEquipment.FeeComponents; }
         }
 
-        public override int RentalLoyalityPoints()
+        public override int RentalLoyalityPoints
         {
-            return 2;
+            get { return 2; }
         }
     }
 
@@ -54,9 +55,9 @@ namespace Server.Model
             new RegularFee()
         };
 
-        protected override IEnumerable<FeeComponent> RentalFeeComponents()
+        protected override IEnumerable<FeeComponent> RentalFeeComponents
         {
-            return RegularEquipment.FeeComponents;
+            get { return RegularEquipment.FeeComponents; }
         }
     }
 
@@ -68,9 +69,9 @@ namespace Server.Model
             new RegularFee()
         };
 
-        protected override IEnumerable<FeeComponent> RentalFeeComponents()
+        protected override IEnumerable<FeeComponent> RentalFeeComponents
         {
-            return SpecializedEquipment.FeeComponents;
+            get { return SpecializedEquipment.FeeComponents; }
         }
     }
 }

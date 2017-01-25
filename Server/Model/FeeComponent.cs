@@ -16,7 +16,7 @@ namespace Server.Model
         public decimal ApplyFee(ref int daysLeft, CustomerRate rate)
         {
             int amount = daysLeft > 0 ? 1 : 0;
-            return rate.OneTimeFee() * amount;
+            return rate.OneTimeFee * amount;
         }
     }
 
@@ -48,7 +48,7 @@ namespace Server.Model
 
         public override decimal OneDayFee(CustomerRate rate)
         {
-            return rate.PremiumDailyFee();
+            return rate.PremiumDailyFee;
         }
     }
 
@@ -62,7 +62,7 @@ namespace Server.Model
 
         public override decimal OneDayFee(CustomerRate rate)
         {
-            return rate.RegularDailyFee();
+            return rate.RegularDailyFee;
         }
     }
 }

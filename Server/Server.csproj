@@ -46,11 +46,14 @@
     <Compile Include="CommandMessageHandler.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Handler\GetEquipmentListHandler.cs" />
+    <Compile Include="Handler\RentRequestHandler.cs" />
     <Compile Include="Model\Currency.cs" />
     <Compile Include="Model\CustomerRate.cs" />
     <Compile Include="Model\Equipment.cs" />
     <Compile Include="Model\MoneyValue.cs" />
     <Compile Include="Model\FeeComponent.cs" />
+    <Compile Include="Model\RentItem.cs" />
+    <Compile Include="Model\Invoice.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using NServiceBus;
 using NServiceBus.Logging;
-using Shared;
+using Shared.Messages;
 using System.Collections.Generic;
 using System;
 using Server.Model;
@@ -29,7 +29,7 @@ namespace Server.Handler
             for (var i = 0; i < Data.Equipments.Count; i++)
             {
                 var equipment = Data.Equipments[i];
-                equipments.Add(new Shared.Equipment()
+                equipments.Add(new Shared.Messages.Equipment()
                 {
                     Id = i,
                     Name = equipment.Name,

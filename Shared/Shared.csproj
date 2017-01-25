@@ -43,6 +43,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="ErrorCodes.cs" />
     <Compile Include="Messages\Equipment.cs" />
+    <Compile Include="Messages\Rent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

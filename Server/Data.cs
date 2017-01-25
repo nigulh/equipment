@@ -37,5 +37,49 @@ namespace Server
                 Url = "https://www.boschtools.com/us/en/ocsmedia/optimized/full/Bosch_Breaker_Hammer_BH2760VC_(EN).png"
             }
         };
+
+        public static List<Invoice> Orders = new List<Invoice>();
+    }
+
+    public class Customer : CustomerRate
+    {
+        public static Customer Instance = new Customer()
+        {
+            Currency = Currency.EUR,
+            OneTimeFee = 100,
+            PremiumDailyFee = 60,
+            RegularDailyFee = 40
+        };
+
+        private Customer()
+        {
+            Cart = new List<RentItem>();
+        }
+
+        public Currency Currency { get; set; }
+
+        public decimal OneTimeFee { get; set; }
+
+        public decimal PremiumDailyFee { get; set; }
+
+        public decimal RegularDailyFee { get; set; }
+
+        private List<RentItem> Cart { get; set; }
+
+        public void AddToCart(Equipment equipment, int daysToRent)
+        {
+            Cart.Add(new RentItem(equipment, daysToRent));
+        }
+
+        public Invoice PlaceOrder()
+        {
+            var order = new Invoice(this, Cart);
+            Data.Orders.Add(order);
+            Cart.Clear();
+            return order;
+        }
     }
 }
+
+
+

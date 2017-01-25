@@ -23,7 +23,7 @@ public class MvcApplication :
             "{controller}/{action}/{id}", // URL with parameters
             new
             {
-                controller = "Equipments",
+                controller = "Equipment",
                 action = "List",
                 id = UrlParameter.Optional
             } // Parameter defaults

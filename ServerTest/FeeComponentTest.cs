@@ -11,19 +11,19 @@ namespace ServerTest
             get { return Currency.EUR; }
         }
 
-        decimal CustomerRate.OneTimeFee()
+        decimal CustomerRate.OneTimeFee
         {
-            return 100;
+            get { return 100; }
         }
 
-        decimal CustomerRate.PremiumDailyFee()
+        decimal CustomerRate.PremiumDailyFee
         {
-            return 60;
+            get { return 60; }
         }
 
-        decimal CustomerRate.RegularDailyFee()
+        decimal CustomerRate.RegularDailyFee
         {
-            return 40;
+            get { return 40; }
         }
     }
 
