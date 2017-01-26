@@ -20,7 +20,7 @@ namespace Client.Models
         [Display(Name="Image", ResourceType=typeof(Resources.Equipment))]
         public string Url { get; set; }
 
-        [Range(1, 100, ErrorMessage="InvalidDaysToRent", ErrorMessageResourceType=typeof(Resources.Equipment))]
+        [Range(1, 100, ErrorMessageResourceName="InvalidDaysToRent", ErrorMessageResourceType=typeof(Resources.Equipment))]
         [Display(Name="DaysToRent", ResourceType=typeof(Resources.Equipment))]
         public int DaysToRent { get; set; }
 

@@ -7,7 +7,11 @@ namespace Client
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/js").Include("~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js")
+                .Include("~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval")
+                .Include("~/Scripts/jquery.validate*")
+                .Include("~/Scripts/jquery.unobtrusive*"));
             bundles.Add(new StyleBundle("~/Content/css")
                 .Include("~/Content/site.css")
                 .Include("~/Content/custom.css"));
