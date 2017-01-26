@@ -75,7 +75,7 @@ namespace Server
         {
             if (Cart.Any())
             {
-                var order = new Invoice(this, Cart, Data.Orders.Count);
+                var order = new Invoice(this, Cart, Data.Orders.Count + 1);
                 Data.Orders.Add(order);
                 Cart.Clear();
                 return order;
