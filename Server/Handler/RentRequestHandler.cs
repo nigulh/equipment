@@ -11,7 +11,7 @@ namespace Server.Handler
 {
     class RentRequestHandler : IHandleMessages<RentRequest>
     {
-        static ILog log = LogManager.GetLogger<GetEquipmentListHandler>();
+        static ILog log = LogManager.GetLogger<RentRequestHandler>();
 
         public Task Handle(RentRequest message, IMessageHandlerContext context)
         {

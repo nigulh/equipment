@@ -12,12 +12,10 @@ namespace Client.Controllers
 {
     public class EquipmentController : Controller
     {
-        IEndpointInstance endpoint;
-        IEquipmentProvider dataProvider;
+        IEquipmentService dataProvider;
 
-        public EquipmentController(IEndpointInstance endpoint, IEquipmentProvider dataProvider)
+        public EquipmentController(IEquipmentService dataProvider)
         {
-            this.endpoint = endpoint;
             this.dataProvider = dataProvider;
         }
 

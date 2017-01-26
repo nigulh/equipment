@@ -18,6 +18,9 @@ public class MvcApplication :
     {
         routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+        routes.MapRoute("Invoice", "Invoice",
+            new { controller = "Invoice", action = "Get" });
+
         routes.MapRoute(
             "Default", // Route name
             "{controller}/{action}/{id}", // URL with parameters
@@ -68,9 +71,11 @@ public class MvcApplication :
 
         var updater = new ContainerBuilder();
         updater.RegisterInstance(endpoint);
+
+        updater.RegisterType<ServerMessageService>().As<IServerMessageService>();
+        updater.RegisterType<InvoiceService>().As<IInvoiceService>();
+        updater.RegisterType<EquipmentService>().As<IEquipmentService>();
         updater.RegisterControllers(typeof(MvcApplication).Assembly);
-        var equipmentProvider = new EquipmentProvider(endpoint);
-        updater.RegisterInstance<IEquipmentProvider>(equipmentProvider);
         var updated = updater.Build();
 
         DependencyResolver.SetResolver(new AutofacDependencyResolver(updated));

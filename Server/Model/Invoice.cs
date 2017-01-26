@@ -8,12 +8,14 @@ namespace Server.Model
 {
     public class Invoice
     {
-        public Invoice(Server.Customer customer, List<RentItem> items)
+        public Invoice(Server.Customer customer, List<RentItem> items, int id)
         {
+            this.Id = id;
             this.Customer = customer;
             this.Items = new List<RentItem>(items);
         }
 
+        public int Id { get; private set; }
         public Customer Customer { get; set; }
         public List<RentItem> Items { get; set; }
         public MoneyValue Price

@@ -22,17 +22,6 @@ namespace Client.Service
         }
     }
 
-    public class Util
-    {
-        public static async Task<T> GetServerResponse<T>(IEndpointInstance endpoint, IMessage command) where T : IMessage
-        {
-            var sendOptions = new SendOptions();
-            sendOptions.SetDestination(Configuration.GetServerAddress());
-            var response = await endpoint.Request<T>(command, sendOptions).ConfigureAwait(false);
-            return response;
-        }
-    }
-
     public static class Configuration
     {
         private static string _serverAddress = null;

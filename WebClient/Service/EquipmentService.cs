@@ -9,21 +9,21 @@ using Shared.Messages;
 
 namespace Client.Service
 {
-    public interface IEquipmentProvider
+    public interface IEquipmentService
     {
         Task<EquipmentList> ListAll();
         Task<Client.Models.Equipment> Get(int id);
         void Rent(int id, int days);
     }
 
-    public class EquipmentProvider : IEquipmentProvider
+    public class EquipmentService : IEquipmentService
     {
         private EquipmentList _equipmentList = null;
-        IEndpointInstance endpoint;
+        IServerMessageService server;
 
-        public EquipmentProvider(IEndpointInstance endpoint)
+        public EquipmentService(IServerMessageService server)
         {
-            this.endpoint = endpoint;
+            this.server = server;
         }
 
         public async Task<EquipmentList> ListAll()
@@ -37,7 +37,7 @@ namespace Client.Service
             // TODO: Make it thread safe
             if (_equipmentList == null)
             {
-                _equipmentList = await Util.GetServerResponse<EquipmentList>(endpoint, new GetEquipmentList());
+                _equipmentList = await server.GetResponse<EquipmentList>(new GetEquipmentList());
             }
         }
 
@@ -50,7 +50,7 @@ namespace Client.Service
         public async void Rent(int id, int days)
         {
             var request = new RentRequest() { ItemId = id, DaysToRent = days };
-            var response = await Util.GetServerResponse<RentResponse>(endpoint, request);
+            var response = await server.GetResponse<RentResponse>(request);
         }
     }
 }

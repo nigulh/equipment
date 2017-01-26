@@ -73,10 +73,14 @@ namespace Server
 
         public Invoice PlaceOrder()
         {
-            var order = new Invoice(this, Cart);
-            Data.Orders.Add(order);
-            Cart.Clear();
-            return order;
+            if (Cart.Any())
+            {
+                var order = new Invoice(this, Cart, Data.Orders.Count);
+                Data.Orders.Add(order);
+                Cart.Clear();
+                return order;
+            }
+            return null;
         }
     }
 }

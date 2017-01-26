@@ -5,6 +5,7 @@ using Shared.Messages;
 using System.Collections.Generic;
 using System;
 using Server.Model;
+using System.Linq;
 
 
 namespace Server.Handler
@@ -24,21 +25,19 @@ namespace Server.Handler
         {
             log.Info("GetEquipmentList handling");
 
-            EquipmentList equipments = new EquipmentList();
+            var response = Data.Equipments.Select(ConvertEquipment);
+            return context.Reply(new EquipmentList() { Items = response.ToList() });
+        }
 
-            for (var i = 0; i < Data.Equipments.Count; i++)
+        private static Shared.Messages.Equipment ConvertEquipment(Model.Equipment equipment, int index)
+        {
+            return new Shared.Messages.Equipment()
             {
-                var equipment = Data.Equipments[i];
-                equipments.Add(new Shared.Messages.Equipment()
-                {
-                    Id = i,
-                    Name = equipment.Name,
-                    Url = equipment.Url,
-                    Type = typeMap[equipment.GetType()]
-                });
-            }
-
-            return context.Reply(equipments);
+                Id = index,
+                Name = equipment.Name,
+                Url = equipment.Url,
+                Type = typeMap[equipment.GetType()]
+            };
         }
     }
 }

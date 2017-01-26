@@ -8,8 +8,8 @@
     <ProjectGuid>{B363FF88-1C00-4FB6-A22E-44E2FB754944}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Messages</RootNamespace>
-    <AssemblyName>Messages</AssemblyName>
+    <RootNamespace>Shared</RootNamespace>
+    <AssemblyName>Shared</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -43,6 +43,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="ErrorCodes.cs" />
     <Compile Include="Messages\Equipment.cs" />
+    <Compile Include="Messages\Invoice.cs" />
     <Compile Include="Messages\Rent.cs" />
   </ItemGroup>
   <ItemGroup>

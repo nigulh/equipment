@@ -124,13 +124,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\SendAndBlockController.cs" />
     <Compile Include="Controllers\SendAsyncController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Equipment.cs" />
-    <Compile Include="Service\EquipmentProvider.cs" />
     <Compile Include="Resources\Enums.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +142,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Equipment.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Invoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Invoice.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\EquipmentService.cs" />
+    <Compile Include="Service\InvoiceService.cs" />
+    <Compile Include="Service\ServerMessageService.cs" />
     <Compile Include="Service\Util.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Invoice\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -201,7 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Enums.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Enums.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources</CustomToolNamespace>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -209,6 +218,11 @@
     <EmbeddedResource Include="Resources\Equipment.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Equipment.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Invoice.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Invoice.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>

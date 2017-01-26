@@ -22,14 +22,14 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Enums {
+    public class Invoice {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Enums() {
+        internal Invoice() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Client.Resources.Enums", typeof(Enums).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Client.Resources.Invoice", typeof(Invoice).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,74 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heavy.
+        ///   Looks up a localized string similar to No invoice.
         /// </summary>
-        public static string EquipmentType_Heavy {
+        public static string Empty_invoice {
             get {
-                return ResourceManager.GetString("EquipmentType_Heavy", resourceCulture);
+                return ResourceManager.GetString("Empty_invoice", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Regular.
+        ///   Looks up a localized string similar to {0} days.
         /// </summary>
-        public static string EquipmentType_Regular {
+        public static string Format_days {
             get {
-                return ResourceManager.GetString("EquipmentType_Regular", resourceCulture);
+                return ResourceManager.GetString("Format_days", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Specialized.
+        ///   Looks up a localized string similar to {0} {1}.
         /// </summary>
-        public static string EquipmentType_Specialized {
+        public static string Format_money {
             get {
-                return ResourceManager.GetString("EquipmentType_Specialized", resourceCulture);
+                return ResourceManager.GetString("Format_money", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice_{0}.txt.
+        /// </summary>
+        public static string Invoice_filename {
+            get {
+                return ResourceManager.GetString("Invoice_filename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0,-30} {1}: {2}.
+        /// </summary>
+        public static string Invoice_item_format {
+            get {
+                return ResourceManager.GetString("Invoice_item_format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice nr {0}.
+        /// </summary>
+        public static string Invoice_title {
+            get {
+                return ResourceManager.GetString("Invoice_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loyalty points earned: {0}.
+        /// </summary>
+        public static string Total_loyalty_points {
+            get {
+                return ResourceManager.GetString("Total_loyalty_points", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total price: {0}.
+        /// </summary>
+        public static string Total_price {
+            get {
+                return ResourceManager.GetString("Total_price", resourceCulture);
             }
         }
     }
