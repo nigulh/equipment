@@ -40,8 +40,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
-    <Compile Include="ErrorCodes.cs" />
     <Compile Include="Messages\Equipment.cs" />
     <Compile Include="Messages\Invoice.cs" />
     <Compile Include="Messages\Rent.cs" />
