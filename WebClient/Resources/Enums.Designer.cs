@@ -39,7 +39,7 @@ namespace Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AsyncPagesMVC.Resources.Enums", typeof(Enums).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Client.Resources.Enums", typeof(Enums).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using NServiceBus;
 using Shared;
 using System.Threading.Tasks;
-using AsyncPagesMVC.Service;
+using Client.Service;
 
-namespace AsyncPagesMVC.Controllers
+namespace Client.Controllers
 {
     public class EquipmentController : Controller
     {

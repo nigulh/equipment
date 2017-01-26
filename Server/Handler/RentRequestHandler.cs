@@ -24,6 +24,7 @@ namespace Server.Handler
             }
             catch // TODO: what to do here?
             {
+                log.Error("RentRequest error");
             }
             RentResponse response = new RentResponse();
             return context.Reply(response);

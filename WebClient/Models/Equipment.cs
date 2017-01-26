@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using Shared.Messages;
 
-namespace AsyncPagesMVC.Models
+namespace Client.Models
 {
     public class Equipment
     {
@@ -24,9 +24,9 @@ namespace AsyncPagesMVC.Models
         [Display(Name="DaysToRent", ResourceType=typeof(Resources.Equipment))]
         public int DaysToRent { get; set; }
 
-        public static AsyncPagesMVC.Models.Equipment Convert(Shared.Messages.Equipment data)
+        public static Client.Models.Equipment Convert(Shared.Messages.Equipment data)
         {
-            return new AsyncPagesMVC.Models.Equipment()
+            return new Client.Models.Equipment()
             {
                 Id = data.Id,
                 Name = data.Name,

@@ -39,7 +39,7 @@ namespace Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AsyncPagesMVC.Resources.Equipment", typeof(Equipment).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Client.Resources.Equipment", typeof(Equipment).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

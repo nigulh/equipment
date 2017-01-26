@@ -8,7 +8,7 @@ using Shared;
 using System.Threading.Tasks;
 using System.Resources;
 
-namespace AsyncPagesMVC.Service
+namespace Client.Service
 {
     public static class EnumExtensions
     {

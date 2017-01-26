@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using AsyncPagesMVC.Models;
+using Client.Models;
 using System.Threading.Tasks;
 using NServiceBus;
 using Shared.Messages;
 
-namespace AsyncPagesMVC.Service
+namespace Client.Service
 {
     public interface IEquipmentProvider
     {
         Task<EquipmentList> ListAll();
-        Task<AsyncPagesMVC.Models.Equipment> Get(int id);
+        Task<Client.Models.Equipment> Get(int id);
         void Rent(int id, int days);
     }
 
@@ -41,10 +41,10 @@ namespace AsyncPagesMVC.Service
             }
         }
 
-        public async Task<AsyncPagesMVC.Models.Equipment> Get(int id)
+        public async Task<Client.Models.Equipment> Get(int id)
         {
             await EnsureEquipmentList();
-            return AsyncPagesMVC.Models.Equipment.Convert(_equipmentList.Items[id]);
+            return Client.Models.Equipment.Convert(_equipmentList.Items[id]);
         }
 
         public async void Rent(int id, int days)

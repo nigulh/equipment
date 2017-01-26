@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace AsyncPagesMVC
+namespace Client
 {
     public class BundleConfig
     {
