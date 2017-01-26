@@ -22,7 +22,7 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Enums {
+    internal class Enums {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Client.Resources.Enums", typeof(Enums).Assembly);
@@ -51,7 +51,7 @@ namespace Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,16 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Heavy.
         /// </summary>
-        public static string EquipmentType_Heavy {
+        internal static string EquipmentType_Heavy {
             get {
                 return ResourceManager.GetString("EquipmentType_Heavy", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Regular.
+        ///   Looks up a localized string similar to Normal.
         /// </summary>
-        public static string EquipmentType_Regular {
+        internal static string EquipmentType_Regular {
             get {
                 return ResourceManager.GetString("EquipmentType_Regular", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Specialized.
         /// </summary>
-        public static string EquipmentType_Specialized {
+        internal static string EquipmentType_Specialized {
             get {
                 return ResourceManager.GetString("EquipmentType_Specialized", resourceCulture);
             }

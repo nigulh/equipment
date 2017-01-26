@@ -5,14 +5,24 @@ using System.Web;
 using System.Configuration;
 using NServiceBus;
 using Shared;
+using Shared.Messages;
 using System.Threading.Tasks;
 using System.Resources;
+using System.Globalization;
 
 namespace Client.Service
 {
     public static class EnumExtensions
     {
         public static string GetDisplayName(this Enum e)
+        {
+            var key = e.GetType().Name + "_" + e;
+            var resourceDisplayName = Resources.Enums.ResourceManager.GetString(key);
+
+            return string.IsNullOrWhiteSpace(resourceDisplayName) ? string.Format("[[{0}]]", e) : resourceDisplayName;
+        }
+
+        public static string GetDisplayName2(this Shared.Messages.EquipmentType e)
         {
             // TODO: Make it work
             var rm = new ResourceManager(typeof(Resources.Enums).Name, typeof(Resources.Enums).Assembly);

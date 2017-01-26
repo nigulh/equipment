@@ -121,7 +121,7 @@
     <value>Heavy</value>
   </data>
   <data name="EquipmentType_Regular" xml:space="preserve">
-    <value>Regular</value>
+    <value>Normal</value>
   </data>
   <data name="EquipmentType_Specialized" xml:space="preserve">
     <value>Specialized</value>

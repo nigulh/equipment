@@ -1,7 +1,4 @@
-﻿@using Client.Service;
-@using Client.Models;
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,12 +9,9 @@
 </head>
   
 <body>
+    @RenderPage("~/Views/Shared/_links.cshtml")
+
     @RenderBody()
-@*
-           @RenderPage("~/Views/Shared/_links.cshtml")
-     *@
-        @RenderPage("~/Views/Shared/_links.cshtml")
-   
 
     @Scripts.Render("~/bundles/js")
     @RenderSection("scripts", required: false)
