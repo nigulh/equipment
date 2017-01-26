@@ -35,7 +35,7 @@ namespace Client.Controllers
         //
         // POST: /Equipments/Rent/5
         [HttpPost]
-        public ActionResult Rent(int id, FormCollection collection)
+        public async Task<ActionResult> Rent(int id, FormCollection collection)
         {
             try
             {
@@ -46,8 +46,8 @@ namespace Client.Controllers
             }
             catch
             {
-                return View();
             }
+            return await Rent(id);
         }
 
 
